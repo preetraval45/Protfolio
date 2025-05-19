@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preet Raval | Portfolio</title>
+    <link rel="stylesheet" href="stylessheet.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Primary Navigation">
+            <ul class="nav-list" id="primary-navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#volunteer">Volunteer Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button
+            type="button"
+            class="menu-toggle"
+            id="mobile-menu"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+        >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <main>
+        <section id="home" class="section" tabindex="-1">
+            <div class="container home-container">
+<div class="home-text">
+    <h1>Welcome to My Portfolio</h1>
+    <p>
+       I’m Preet Raval, a front-end developer with a cybersecurity edge. I build responsive, secure web apps using React, JavaScript, and AWS. With a flair for design and a focus on digital safety, I turn ideas into fast, user-first experiences.
+    </p>
+    <section class="social-links" aria-label="Social media links">
+        <a
+            href="https://github.com/preetraval45"
+            target="_blank"
+            aria-label="GitHub"
+            rel="noopener noreferrer"
+            class="icon-link"
+        >
+            <span class="material-icons">code</span>
+        </a>
+        <a
+            href="https://www.linkedin.com/in/preet-raval-5a5807206/"
+            target="_blank"
+            aria-label="LinkedIn"
+            rel="noopener noreferrer"
+            class="icon-link"
+        >
+            <span class="material-icons">business_center</span>
+        </a>
+    </section>
+    <div class="resume-download">
+        <button type="button" class="btn-download" aria-label="Download Resume" onclick="downloadResume()">
+            Download My Resume
+        </button>
+    </div>
+</div>
+                <div class="home-image">
+                    <img src="1(1).jpg" alt="Preet Raval" class="profile-pic">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section" tabindex="-1" aria-labelledby="skills-heading">
+            <div class="container">
+                <h2 id="skills-heading">Skills</h2>
+                <div class="skills-container">
+                    <article class="skill-item">
+                        <h3>Cybersecurity &amp; Cloud</h3>
+                        <p>Penetration Testing, AWS Solution Architecture, Cyber Forensics</p>
+                    </article>
+                    <article class="skill-item">
+                        <h3>Development Tools</h3>
+                        <p>VS Code, GitHub, Autopsy, FTK Imager</p>
+                    </article>
+                    <article class="skill-item">
+                        <h3>Frontend Development</h3>
+                        <p>HTML, CSS, JavaScript, React</p>
+                    </article>
+                    <article class="skill-item">
+                        <h3>Backend Development</h3>
+                        <p>Java, MySQL, Microsoft SQL Server</p>
+                    </article>
+                    <article class="skill-item">
+                        <h3>UI/UX &amp; Database</h3>
+                        <p>UI/UX Design, Database Management</p>
+                    </article>
+                    <article class="skill-item">
+                        <h3>Programming Languages</h3>
+                        <p>C, C++, Python, C#</p>
+                    </article>
+                    <article class="skill-item">
+                        <h3>Soft Skills</h3>
+                        <p>Problem Solving, Critical Thinking, Leadership, Teamwork, Communication, Time Management, Adaptability, Attention to Detail, Project Management, Conflict Resolution, Decision-Making, Analytical Skills, Client Relations, Collaboration, Mentorship</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section" tabindex="-1" aria-labelledby="education-heading">
+            <div class="container">
+                <h2 id="education-heading">Education</h2>
+                <article class="education-item">
+                    <h3>University of North Carolina at Charlotte</h3>
+                    <p class="degree">BS in Computer Science - Cybersecurity</p>
+                    <p class="graduation">(Graduated: May 2025)</p>
+                </article>
+                <article class="education-item">
+                    <h3>Vellore Institute of Technology, Vellore, India</h3>
+                    <p class="degree">BS in Computer Science and Engineering</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="volunteer" class="section" tabindex="-1" aria-labelledby="volunteer-heading">
+            <div class="container">
+                <h2 id="volunteer-heading">Volunteer Experience</h2>
+                <article class="experience-item">
+                    <h3>Design Head, IEEE-Industrial Application Society</h3>
+                    <p>Vellore, India | Jan 2022 - Dec 2022</p>
+                    <ul>
+                        <li>Led a design team of 20 members, orchestrating the development and enhancement of the club&apos;s UI/UX for its website.</li>
+                        <li>Designed and implemented innovative user interfaces that significantly improved user engagement and satisfaction.</li>
+                        <li>Coordinated with cross-functional teams to ensure cohesive and aesthetically pleasing design elements.</li>
+                        <li>Played a pivotal role in the club&apos;s achievement of winning the Best Club Award of the Year through exceptional leadership and design contributions.</li>
+                    </ul>
+                </article>
+                <article class="experience-item">
+                    <h3>HR Head, Skillship Vellore</h3>
+                    <p>Vellore, India | Apr 2022 - Dec 2022</p>
+                    <ul>
+                        <li>Managed a diverse team of 100 volunteers, fostering a positive and productive work environment.</li>
+                        <li>Implemented effective HR strategies to enhance team performance and satisfaction.</li>
+                        <li>Ensured seamless communication and collaboration among team members, facilitating successful project completions and organizational goals.</li>
+                        <li>Developed and executed volunteer training programs, increasing overall efficiency and competency.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section" tabindex="-1" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading">Projects</h2>
+                <article class="project-item">
+                    <h3>TCP/IP Chat Application</h3>
+                    <p>GitHub Link: <a href="https://github.com/preetraval45/TCP-IP-Chat-Application.git" target="_blank" rel="noopener noreferrer">TCP/IP Chat Application</a></p>
+                    <p>Technology Used: C++</p>
+                    <p>Description: Developed a chat application using TCP/IP protocol and Windows sockets (WinSock) supporting real-time communication.</p>
+                </article>
+                <article class="project-item">
+                    <h3>Food Delivery Application</h3>
+                    <p>GitHub Link: <a href="https://github.com/preetraval45/Food-Deilvery-application" target="_blank" rel="noopener noreferrer">Food Delivery Application</a></p>
+                    <p>Technology Used: HTML, CSS, JavaScript, React</p>
+                    <p>Description: Developed a fully responsive online food ordering platform with secure authentication and payment processing features.</p>
+                </article>
+                <article class="project-item">
+                    <h3>Online Travel Booking System</h3>
+                    <p>GitHub Link: <a href="https://github.com/preetraval45/online-travel-booking-system" target="_blank" rel="noopener noreferrer">Online Travel Booking System</a></p>
+                    <p>Technology Used: Java, MySQL</p>
+                    <p>Description: Developed a Java-based travel booking system with user authentication and real-time ticket availability.</p>
+                </article>
+                <article class="project-item">
+                    <h3>Portfolio Website</h3>
+                    <p>GitHub Link: <a href="https://github.com/preetraval45/Protfolio.git" target="_blank" rel="noopener noreferrer">Portfolio</a></p>
+                    <p>Technology Used: HTML, CSS, JavaScript</p>
+                    <p>Description: Created a personal portfolio website to showcase professional projects, skills, and experiences.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="certifications" class="section" tabindex="-1" aria-labelledby="certifications-heading">
+            <div class="container">
+                <h2 id="certifications-heading">Certifications &amp; Awards</h2>
+                <article class="certification-item">
+                    <h3>AWS Certified Solutions Architect Associate – SAA-C03 (Concept Learning)</h3>
+                </article>
+                <article class="certification-item">
+                    <h3>Cisco CCNA 200-301 (Networking Fundamentals) (Concept Learning)</h3>
+                </article>
+                <article class="certification-item">
+                    <h3>Udemy: C++ Certification, Front-End Development Ultimate Guide</h3>
+                </article>
+                <article class="certification-item">
+                    <h3>Coursera: Java Programming (Primitive Types, Decision Making, OOP)</h3>
+                </article>
+                <article class="certification-item">
+                    <h3>Cybersecurity: Introduction to Penetration Testing, Cybersecurity 2023</h3>
+                </article>
+                <article class="certification-item">
+                    <h3>C# Certification: C Sharp Basic Certificate</h3>
+                </article>
+                <article class="certification-item">
+                    <h3>SQL for Any IT Professional – O'Reilly by Pearson (May 2025)</h3>
+                </article>
+                <article class="certification-item">
+                    <h3>Hackathon - Participation Certificate</h3>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section" tabindex="-1" aria-labelledby="contact-heading">
+            <div class="container contact-container">
+                <h2 id="contact-heading">Contact Me</h2>
+                <p>
+                    I'd love to hear from you! Whether you have a question, want to collaborate, or just want to say
+                    hello, feel free to reach out.
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="material-icons contact-icon">email</span>
+                        <a href="mailto:preetraval45@gmail.com">preetraval45@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="material-icons contact-icon">phone</span>
+                        <a href="tel:+1&#8209;980&#160;361&#160;1999">+1&#8209;980&#160;361&#160;1999</a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://github.com/preetraval45" target="_blank" rel="noopener noreferrer" class="icon-link">
+                            <span class="material-icons contact-icon">code</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/preet-raval-5a5807206/" target="_blank" rel="noopener noreferrer" class="icon-link">
+                            <span class="material-icons contact-icon">business_center</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" action="mailto:preetraval45@gmail.com" method="post" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Preet Raval. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = 'Preet Raval Resume.pdf';
+            link.download = 'Preet_Raval_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
