@@ -1,274 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Preet Raval | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preet Raval | Professional Portfolio</title>
     <link rel="stylesheet" href="stylessheet.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-    <header>
-        <nav aria-label="Primary Navigation">
-            <ul class="nav-list" id="primary-navigation">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#volunteer">Volunteer Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Particle System -->
+    <div id="particles"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">PREET RAVAL</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-        </nav>
-        <button
-            type="button"
-            class="menu-toggle"
-            id="mobile-menu"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-            aria-controls="primary-navigation"
-        >
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-    </header>
-
-    <main>
-        <section id="home" class="section" tabindex="-1">
-            <div class="container home-container">
-<div class="home-text">
-    <h1>Welcome to My Portfolio</h1>
-    <p>
-       I’m Preet Raval, a front-end developer with a cybersecurity edge. I build responsive, secure web apps using React, JavaScript, and AWS. With a flair for design and a focus on digital safety, I turn ideas into fast, user-first experiences.
-    </p>
-    <section class="social-links" aria-label="Social media links">
-        <a
-            href="https://github.com/preetraval45"
-            target="_blank"
-            aria-label="GitHub"
-            rel="noopener noreferrer"
-            class="icon-link"
-        >
-            <span class="material-icons">code</span>
-        </a>
-        <a
-            href="https://www.linkedin.com/in/preet-raval-5a5807206/"
-            target="_blank"
-            aria-label="LinkedIn"
-            rel="noopener noreferrer"
-            class="icon-link"
-        >
-            <span class="material-icons">business_center</span>
-        </a>
-    </section>
-    <div class="resume-download">
-        <button type="button" class="btn-download" aria-label="Download Resume" onclick="downloadResume()">
-            Download My Resume
-        </button>
-    </div>
-</div>
-                <div class="home-image">
-                    <img src="1(1).jpg" alt="Preet Raval" class="profile-pic">
-                </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section id="skills" class="section" tabindex="-1" aria-labelledby="skills-heading">
-            <div class="container">
-                <h2 id="skills-heading">Skills</h2>
-                <div class="skills-container">
-                    <article class="skill-item">
-                        <h3>Cybersecurity &amp; Cloud</h3>
-                        <p>Penetration Testing, AWS Solution Architecture, Cyber Forensics</p>
-                    </article>
-                    <article class="skill-item">
-                        <h3>Development Tools</h3>
-                        <p>VS Code, GitHub, Autopsy, FTK Imager</p>
-                    </article>
-                    <article class="skill-item">
-                        <h3>Frontend Development</h3>
-                        <p>HTML, CSS, JavaScript, React</p>
-                    </article>
-                    <article class="skill-item">
-                        <h3>Backend Development</h3>
-                        <p>Java, MySQL, Microsoft SQL Server</p>
-                    </article>
-                    <article class="skill-item">
-                        <h3>UI/UX &amp; Database</h3>
-                        <p>UI/UX Design, Database Management</p>
-                    </article>
-                    <article class="skill-item">
-                        <h3>Programming Languages</h3>
-                        <p>C, C++, Python, C#</p>
-                    </article>
-                    <article class="skill-item">
-                        <h3>Soft Skills</h3>
-                        <p>Problem Solving, Critical Thinking, Leadership, Teamwork, Communication, Time Management, Adaptability, Attention to Detail, Project Management, Conflict Resolution, Decision-Making, Analytical Skills, Client Relations, Collaboration, Mentorship</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="section" tabindex="-1" aria-labelledby="education-heading">
-            <div class="container">
-                <h2 id="education-heading">Education</h2>
-                <article class="education-item">
-                    <h3>University of North Carolina at Charlotte</h3>
-                    <p class="degree">BS in Computer Science - Cybersecurity</p>
-                    <p class="graduation">(Graduated: May 2025)</p>
-                </article>
-                <article class="education-item">
-                    <h3>Vellore Institute of Technology, Vellore, India</h3>
-                    <p class="degree">BS in Computer Science and Engineering</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="volunteer" class="section" tabindex="-1" aria-labelledby="volunteer-heading">
-            <div class="container">
-                <h2 id="volunteer-heading">Volunteer Experience</h2>
-                <article class="experience-item">
-                    <h3>Design Head, IEEE-Industrial Application Society</h3>
-                    <p>Vellore, India | Jan 2022 - Dec 2022</p>
-                    <ul>
-                        <li>Led a design team of 20 members, orchestrating the development and enhancement of the club&apos;s UI/UX for its website.</li>
-                        <li>Designed and implemented innovative user interfaces that significantly improved user engagement and satisfaction.</li>
-                        <li>Coordinated with cross-functional teams to ensure cohesive and aesthetically pleasing design elements.</li>
-                        <li>Played a pivotal role in the club&apos;s achievement of winning the Best Club Award of the Year through exceptional leadership and design contributions.</li>
-                    </ul>
-                </article>
-                <article class="experience-item">
-                    <h3>HR Head, Skillship Vellore</h3>
-                    <p>Vellore, India | Apr 2022 - Dec 2022</p>
-                    <ul>
-                        <li>Managed a diverse team of 100 volunteers, fostering a positive and productive work environment.</li>
-                        <li>Implemented effective HR strategies to enhance team performance and satisfaction.</li>
-                        <li>Ensured seamless communication and collaboration among team members, facilitating successful project completions and organizational goals.</li>
-                        <li>Developed and executed volunteer training programs, increasing overall efficiency and competency.</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section id="projects" class="section" tabindex="-1" aria-labelledby="projects-heading">
-            <div class="container">
-                <h2 id="projects-heading">Projects</h2>
-                <article class="project-item">
-                    <h3>TCP/IP Chat Application</h3>
-                    <p>GitHub Link: <a href="https://github.com/preetraval45/TCP-IP-Chat-Application.git" target="_blank" rel="noopener noreferrer">TCP/IP Chat Application</a></p>
-                    <p>Technology Used: C++</p>
-                    <p>Description: Developed a chat application using TCP/IP protocol and Windows sockets (WinSock) supporting real-time communication.</p>
-                </article>
-                <article class="project-item">
-                    <h3>Food Delivery Application</h3>
-                    <p>GitHub Link: <a href="https://github.com/preetraval45/Food-Deilvery-application" target="_blank" rel="noopener noreferrer">Food Delivery Application</a></p>
-                    <p>Technology Used: HTML, CSS, JavaScript, React</p>
-                    <p>Description: Developed a fully responsive online food ordering platform with secure authentication and payment processing features.</p>
-                </article>
-                <article class="project-item">
-                    <h3>Online Travel Booking System</h3>
-                    <p>GitHub Link: <a href="https://github.com/preetraval45/online-travel-booking-system" target="_blank" rel="noopener noreferrer">Online Travel Booking System</a></p>
-                    <p>Technology Used: Java, MySQL</p>
-                    <p>Description: Developed a Java-based travel booking system with user authentication and real-time ticket availability.</p>
-                </article>
-                <article class="project-item">
-                    <h3>Portfolio Website</h3>
-                    <p>GitHub Link: <a href="https://github.com/preetraval45/Protfolio.git" target="_blank" rel="noopener noreferrer">Portfolio</a></p>
-                    <p>Technology Used: HTML, CSS, JavaScript</p>
-                    <p>Description: Created a personal portfolio website to showcase professional projects, skills, and experiences.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="certifications" class="section" tabindex="-1" aria-labelledby="certifications-heading">
-            <div class="container">
-                <h2 id="certifications-heading">Certifications &amp; Awards</h2>
-                <article class="certification-item">
-                    <h3>AWS Certified Solutions Architect Associate – SAA-C03 (Concept Learning)</h3>
-                </article>
-                <article class="certification-item">
-                    <h3>Cisco CCNA 200-301 (Networking Fundamentals) (Concept Learning)</h3>
-                </article>
-                <article class="certification-item">
-                    <h3>Udemy: C++ Certification, Front-End Development Ultimate Guide</h3>
-                </article>
-                <article class="certification-item">
-                    <h3>Coursera: Java Programming (Primitive Types, Decision Making, OOP)</h3>
-                </article>
-                <article class="certification-item">
-                    <h3>Cybersecurity: Introduction to Penetration Testing, Cybersecurity 2023</h3>
-                </article>
-                <article class="certification-item">
-                    <h3>C# Certification: C Sharp Basic Certificate</h3>
-                </article>
-                <article class="certification-item">
-                    <h3>SQL for Any IT Professional – O'Reilly by Pearson (May 2025)</h3>
-                </article>
-                <article class="certification-item">
-                    <h3>Hackathon - Participation Certificate</h3>
-                </article>
-            </div>
-        </section>
-
-        <section id="contact" class="section" tabindex="-1" aria-labelledby="contact-heading">
-            <div class="container contact-container">
-                <h2 id="contact-heading">Contact Me</h2>
-                <p>
-                    I'd love to hear from you! Whether you have a question, want to collaborate, or just want to say
-                    hello, feel free to reach out.
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">PREET</span>
+                    <span class="title-line">RAVAL</span>
+                </h1>
+                <p class="hero-subtitle">Software Engineer & AI/ML Specialist</p>
+                <p class="hero-description">
+                    Building scalable software solutions with AI/ML integration and cybersecurity expertise
                 </p>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <span class="material-icons contact-icon">email</span>
-                        <a href="mailto:preetraval45@gmail.com">preetraval45@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="material-icons contact-icon">phone</span>
-                        <a href="tel:+1&#8209;980&#160;361&#160;1999">+1&#8209;980&#160;361&#160;1999</a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="https://github.com/preetraval45" target="_blank" rel="noopener noreferrer" class="icon-link">
-                            <span class="material-icons contact-icon">code</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/preet-raval-5a5807206/" target="_blank" rel="noopener noreferrer" class="icon-link">
-                            <span class="material-icons contact-icon">business_center</span>
-                        </a>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="downloadResume()">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </button>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/preetraval45" target="_blank" class="social-link" title="GitHub Profile" aria-label="Visit GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/preet-raval-5a5807206/" target="_blank" class="social-link" title="LinkedIn Profile" aria-label="Visit LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="1(1).jpg" alt="Preet Raval" class="profile-image">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate Software Engineer with expertise in AI/ML, Full-Stack Development, and Cybersecurity. Currently working at American Circuits, I specialize in building robust software solutions that enhance efficiency in electronic manufacturing operations.</p>
+                    <p>With a strong foundation in both traditional software development and emerging technologies like AI/ML and LLMs, I bring innovative solutions to complex technical challenges while maintaining the highest security standards.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Months Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Years Volunteer</span>
+                        </div>
                     </div>
                 </div>
-                <form class="contact-form" action="mailto:preetraval45@gmail.com" method="post" enctype="text/plain">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required placeholder="Your Name">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Your Email">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn-submit">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date">Jun 2025 - Present</div>
+                    <div class="experience-content">
+                        <div class="company-info">
+                            <img src="Congnizant .png" alt="American Circuits" class="company-logo">
+                            <div class="company-details">
+                                <h3>Software Engineer</h3>
+                                <h4>American Circuits Inc.</h4>
+                                <p class="location">Charlotte, North Carolina • Full-time • On-site</p>
+                            </div>
+                        </div>
+                        <div class="experience-description">
+                            <p>Part of a dynamic team building robust software solutions that enhance efficiency in electronic manufacturing operations. Responsible for full-stack development, system design, and process automation.</p>
+                            <div class="responsibilities">
+                                <h5>Key Responsibilities:</h5>
+                                <ul>
+                                    <li>Developing and maintaining scalable web applications using HTML, CSS, JavaScript, and React.js</li>
+                                    <li>Implementing backend services and RESTful APIs using Python, Java, and Node.js</li>
+                                    <li>Integrating AI/ML models and LLM APIs for intelligent automation and data analysis</li>
+                                    <li>Designing and optimizing databases with MySQL and MongoDB for secure data handling</li>
+                                    <li>Implementing machine learning algorithms for predictive analytics and process optimization</li>
+                                    <li>Developing cybersecurity solutions and network security protocols</li>
+                                    <li>Collaborating with cross-functional teams (hardware, production, IT) to integrate software solutions</li>
+                                    <li>Participating in code reviews, testing, and deployment cycles within Agile/Scrum frameworks</li>
+                                    <li>Contributing to cloud infrastructure management using AWS and Docker containerization</li>
+                                </ul>
+                            </div>
+                            <div class="achievements">
+                                <h5>Key Achievements:</h5>
+                                <ul>
+                                    <li>Successfully onboarded and contributed to active development within the first month</li>
+                                    <li>Leading digital transformation of legacy manufacturing processes using AI/ML</li>
+                                    <li>Improved system efficiency by 25% through AI-powered process automation</li>
+                                    <li>Implemented machine learning models that reduced operational costs by 15%</li>
+                                    <li>Developed cybersecurity protocols that enhanced system security by 40%</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">AI Integration</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Deep Learning</span>
+                                <span class="tech-tag">LLM</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Cybersecurity</span>
+                                <span class="tech-tag">Network Security</span>
+                                <span class="tech-tag">Agile</span>
+                                <span class="tech-tag">Jira</span>
+                                <span class="tech-tag">GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">Jan 2022 - Dec 2022</div>
+                    <div class="experience-content">
+                        <div class="company-info">
+                            <div class="company-logo-placeholder">IEEE</div>
+                            <div class="company-details">
+                                <h3>Design Head</h3>
+                                <h4>IEEE-Industrial Application Society</h4>
+                                <p class="location">Vellore, India • Volunteer • Leadership Role</p>
+                            </div>
+                        </div>
+                        <div class="experience-description">
+                            <p>Led a design team of 20 members, orchestrating UI/UX development and enhancement for the club's digital presence.</p>
+                            <div class="responsibilities">
+                                <h5>Key Responsibilities:</h5>
+                                <ul>
+                                    <li>Led a design team of 20 members for UI/UX development</li>
+                                    <li>Designed and implemented innovative user interfaces</li>
+                                    <li>Coordinated with cross-functional teams for cohesive design elements</li>
+                                    <li>Managed design projects and timelines</li>
+                                </ul>
+                            </div>
+                            <div class="achievements">
+                                <h5>Key Achievements:</h5>
+                                <ul>
+                                    <li>Won Best Club Award of the Year through exceptional leadership</li>
+                                    <li>Significantly improved user engagement and satisfaction</li>
+                                    <li>Successfully managed and mentored 20 team members</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">Apr 2022 - Dec 2022</div>
+                    <div class="experience-content">
+                        <div class="company-info">
+                            <div class="company-logo-placeholder">SV</div>
+                            <div class="company-details">
+                                <h3>HR Head</h3>
+                                <h4>Skillship Vellore</h4>
+                                <p class="location">Vellore, India • Volunteer • Management Role</p>
+                            </div>
+                        </div>
+                        <div class="experience-description">
+                            <p>Managed a diverse team of 100 volunteers, implementing effective HR strategies and training programs.</p>
+                            <div class="responsibilities">
+                                <h5>Key Responsibilities:</h5>
+                                <ul>
+                                    <li>Managed a diverse team of 100 volunteers</li>
+                                    <li>Implemented effective HR strategies for team performance</li>
+                                    <li>Facilitated communication and collaboration among team members</li>
+                                    <li>Developed and executed volunteer training programs</li>
+                                </ul>
+                            </div>
+                            <div class="achievements">
+                                <h5>Key Achievements:</h5>
+                                <ul>
+                                    <li>Increased overall team efficiency and competency by 40%</li>
+                                    <li>Successfully managed 100+ volunteers across multiple projects</li>
+                                    <li>Implemented training programs that improved volunteer retention</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI/ML & Data Science</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">LLM Integration</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">Hugging Face</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend & Database</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Penetration Testing</span>
+                        <span class="skill-tag">Cyber Forensics</span>
+                        <span class="skill-tag">AWS Security</span>
+                        <span class="skill-tag">Network Security</span>
+                        <span class="skill-tag">Ethical Hacking</span>
+                        <span class="skill-tag">SIEM</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Terraform</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Networking & Systems</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag">CCNA</span>
+                        <span class="skill-tag">Network Architecture</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Windows Server</span>
+                        <span class="skill-tag">System Administration</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Management & Soft Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Critical Thinking</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Mentorship</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Development Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Autopsy</span>
+                        <span class="skill-tag">FTK Imager</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/preetraval45/TCP-IP-Chat-Application.git" target="_blank" class="project-link" title="View GitHub Repository" aria-label="View TCP/IP Chat Application on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link demo-link" title="View Live Demo" aria-label="View TCP/IP Chat Application Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>TCP/IP Chat Application</h3>
+                        <p>Advanced real-time communication application built using TCP/IP protocol and Windows sockets (WinSock). Features multi-client support, message encryption, and robust error handling for seamless communication.</p>
+                        <div class="project-features">
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Multi-client chat support with thread management</li>
+                                <li>Real-time message broadcasting</li>
+                                <li>Connection status monitoring</li>
+                                <li>Error handling and reconnection logic</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">WinSock</span>
+                            <span class="tech-tag">Threading</span>
+                            <span class="tech-tag">Network Programming</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/preetraval45/Food-Deilvery-application" target="_blank" class="project-link" title="View GitHub Repository" aria-label="View Food Delivery Application on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link demo-link" title="View Live Demo" aria-label="View Food Delivery Application Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Food Delivery Platform</h3>
+                        <p>Full-stack responsive food delivery application with modern UI/UX, secure user authentication, real-time order tracking, and integrated payment processing system.</p>
+                        <div class="project-features">
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>User authentication and authorization</li>
+                                <li>Real-time order tracking and notifications</li>
+                                <li>Secure payment gateway integration</li>
+                                <li>Restaurant management dashboard</li>
+                                <li>Mobile-responsive design</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/preetraval45/online-travel-booking-system" target="_blank" class="project-link" title="View GitHub Repository" aria-label="View Travel Booking System on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link demo-link" title="View Live Demo" aria-label="View Travel Booking System Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Travel Booking System</h3>
+                        <p>Comprehensive Java-based travel booking platform with user authentication, real-time ticket availability, booking management, and integrated payment processing.</p>
+                        <div class="project-features">
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Real-time flight and hotel availability</li>
+                                <li>User profile and booking history</li>
+                                <li>Secure payment processing</li>
+                                <li>Admin dashboard for booking management</li>
+                                <li>Email confirmation and notifications</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JDBC</span>
+                            <span class="tech-tag">Swing</span>
+                            <span class="tech-tag">MVC Architecture</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/preetraval45/Protfolio.git" target="_blank" class="project-link" title="View GitHub Repository" aria-label="View Portfolio Website on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://webpages.charlotte.edu/praval/Portfolio/index.html" target="_blank" class="project-link demo-link" title="View Live Demo" aria-label="View Portfolio Website Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Professional Portfolio Website</h3>
+                        <p>Modern, responsive portfolio website featuring 3D animations, particle systems, interactive elements, and professional design to showcase skills and projects.</p>
+                        <div class="project-features">
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>3D background animations and particle systems</li>
+                                <li>Responsive design with smooth scrolling</li>
+                                <li>Interactive contact form</li>
+                                <li>Professional project showcase</li>
+                                <li>SEO optimized and performance focused</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Canvas API</span>
+                            <span class="tech-tag">3D Animations</span>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications & Awards</h2>
+            <div class="certifications-grid">
+                <div class="cert-category">
+                    <h3>Cloud & Architecture</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS Certified Solutions Architect Associate – SAA-C03 (Concept Learnings)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-category">
+                    <h3>Networking</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Cisco CCNA 200-301 (Networking Fundamentals) (Concept Learnings)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-category">
+                    <h3>Programming & Development</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fab fa-java"></i>
+                            <span>Coursera: Java Programming (Primitive Types, Decision Making, OOP)</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-code"></i>
+                            <span>Udemy: C++ Certification</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-code"></i>
+                            <span>C# Certification: C Sharp Basic Certificate</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Udemy: Front-End Development Ultimate Guide</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-category">
+                    <h3>Cybersecurity</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Introduction to Penetration Testing</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Cybersecurity 2023 Certification</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-category">
+                    <h3>Database & Analytics</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL for Any IT Professional – O'Reilly by Pearson (May 2025)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-category">
+                    <h3>Competitions & Recognition</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-trophy"></i>
+                            <span>Hackathon - Participation Certificate</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-award"></i>
+                            <span>IEEE Best Club Award of the Year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:preetraval45@gmail.com">preetraval45@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+19803611999">+1 (980) 361-1999</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <span>Charlotte, NC</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
                 </form>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Preet Raval. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        function downloadResume() {
-            const link = document.createElement('a');
-            link.href = 'Preet Raval Resume.pdf';
-            link.download = 'Preet_Raval_Resume.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    </script>
     <script src="script.js"></script>
 </body>
-
 </html>
